@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>WineClub Wines</h2>
+
+<ul>
+    {% for w in wine_list %}
+        <li>Wines: {{ w.wine_name }}</li>
+    {% endfor %}
+</ul> 
+
+{% endblock %}

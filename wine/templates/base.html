@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+ <html> 
+<head> 
+<title>WineClub</title> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/static/css/styles.css' %}">
+<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
+</head> 
+<body> 
+<div class='jumbotron'> 
+<h1>WineClub</h1>
+<p>Wine Club: for wine lovers</p>
+ </div> 
+   <nav class="navbar navbar-default"> 
+   <div class="container-fluid">
+<div class="navbar-header"> 
+<a class="navbar-brand" href="{% url 'index' %}">WineClub</a> 
+</div> 
+<ul class="nav navbar-nav"> 
+<li><a href="{% url 'wines' %}">Wines</a></li>
+<li>test</li>
+<li>test</li>
+<li>test</li>
+</ul> 
+</div> 
+</nav> 
+<div class="container-fluid"> 
+{% block content %} 
+
+{% endblock content %} 
+</div> 
+</body> 
+</html>
