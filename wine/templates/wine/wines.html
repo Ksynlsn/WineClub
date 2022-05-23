@@ -5,7 +5,7 @@
 
 <ul>
     {% for w in wine_list %}
-        <li>Wines: {{ w.wine_name }}</li>
+        <li><a href="{% url 'details' id=w.id %}">{{ w.wine_name }}</a></li>
     {% endfor %}
 </ul> 
 
