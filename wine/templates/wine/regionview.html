@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Region Details</h2>
+
+<p><a href="{% url 'regions' %}" class="btn"><i>back</i></a></p>
+
+    <dl>
+    <dt>Region Name:</dt>
+    <dd>{{ regions.region_name }}</dd>
+
+    <dt>Location</dt>
+    <dd>{{ regions.country }}</dd>
+
+    <dt>Description:</dt>
+    <dd>{{ regions.description }}</dd>
+    </dl>
+
+{% endblock %} 

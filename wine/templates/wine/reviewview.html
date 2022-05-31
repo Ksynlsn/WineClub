@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Review Details</h2>
+
+<p><a href="{% url 'reviews' %}" class="btn"><i>back</i></a></p>
+
+    <dl>
+    <dt>Wine Name:</dt>
+    <dd>{{ reviews.wine }}</dd>
+
+    <dt>User:</dt>
+    <dd>{{ reviews.user }}</dd>
+
+    <dt>Title:</dt>
+    <dd>{{ reviews.name }}</dd>
+
+    <dt>Review:</dt>
+    <dd>{{ reviews.review }}</dd>
+
+    <small><dt>Date Entered:</dt>
+    <dd>{{ reviews.date_entered }}</dd></small>
+    </dl>
+
+{% endblock %} 

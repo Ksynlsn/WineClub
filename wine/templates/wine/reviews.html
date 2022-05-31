@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>WineClub Wine Reviews</h2>
+
+<ul>
+    {% for r in review_list %}
+        <li><a href="{% url 'review_details' id=r.id %}">{{ r.wine }}</a></li>
+    {% endfor %}
+</ul> 
+
+{% endblock %}
