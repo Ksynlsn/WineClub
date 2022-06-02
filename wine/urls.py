@@ -9,6 +9,8 @@ urlpatterns = [
    path('regionview/<int:id>', views.regionview, name='region_details'),
    path('reviews/', views.reviews, name='reviews'),
    path('reviewview/<int:id>', views.reviewview, name='review_details'),
+   path('newwine/', views.newWine, name='new_wine'),
+   path('newreview/', views.newReview, name='new_review'),
  
    
    
