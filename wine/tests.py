@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Country, Region, Wine, Review
 import datetime
-# from .forms import MeetingForm, ResourceForm
+from .forms import WineForm, ReviewForm
 from django.urls import reverse_lazy, reverse
 
 # Create your tests here.
@@ -54,6 +54,33 @@ class RegionTest(TestCase):
 
     def test_tablename(self):
         self.assertEqual(str(Region._meta.db_table), 'region')
+
+
+# form tests
+class NewWineForm(TestCase):
+    def test_wineForm(self):
+        data={
+            'wine_name': 'Vouvray', 
+            'wine_type': 'Chenin Blanc', 
+            'country': 'France', 
+            'region': 'Loire Valley', 
+            'vintage': '03-22-22'
+            }
+        form=WineForm (data)
+        self.assertTrue(form.is_valid)
+
+
+class NewReviewForm(TestCase):
+    def test_reviewForm(self):
+        data={
+            'wine': 'Vouvray', 
+            'wine': 'Vouray', 
+            'date_entered': '03-22-22',
+            'user': 'exampleUser2', 
+            'review': 'This is an example review'
+            }
+        form=ReviewForm (data)
+        self.assertTrue(form.is_valid)
 
 
 
