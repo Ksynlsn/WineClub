@@ -17,6 +17,7 @@
    <div class="container-fluid">
 <div class="navbar-header"> 
 <a class="navbar-brand" href="{% url 'index' %}">WineClub</a> 
+<small><a class="navbar-brand" href="{% url 'login' %}">Login</a></small> 
 </div> 
 <ul class="nav navbar-nav"> 
 <li><a href="{% url 'wines' %}">Wines</a></li>
@@ -24,6 +25,7 @@
 <li><a href="{% url 'reviews' %}">Reviews</a></li>
 <li><a href="{% url 'new_wine' %}">Add A Wine</a></li>
 <li><a href="{% url 'new_review' %}">Add A Review</a></li>
+<li><a href="{% url 'logoutmessage' %}">Logout</a></li>
 </ul> 
 </div> 
 </nav> 

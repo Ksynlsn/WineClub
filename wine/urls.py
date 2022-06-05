@@ -11,6 +11,8 @@ urlpatterns = [
    path('reviewview/<int:id>', views.reviewview, name='review_details'),
    path('newwine/', views.newWine, name='new_wine'),
    path('newreview/', views.newReview, name='new_review'),
+   path('loginmessage/', views.loginMessage, name='loginmessage'),
+   path('logoutmessage/', views.logoutMessage, name='logoutmessage'),
  
    
    

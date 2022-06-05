@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Wine, Review, Country, Region
 from django.urls import reverse_lazy
 from .forms import WineForm, ReviewForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
@@ -32,6 +33,7 @@ def reviewview(request, id):
     return render(request, 'wine/reviewview.html', {'reviews' : reviews})
 
 # form views
+@login_required
 def newWine(request):
     form=WineForm
 
@@ -48,6 +50,7 @@ def newWine(request):
     return render(request, 'wine/newwine.html', {'form': form}) 
 
 
+@login_required
 def newReview(request):
     form=ReviewForm
 
@@ -62,3 +65,11 @@ def newReview(request):
         form=ReviewForm()
 
     return render(request, 'wine/newreview.html', {'form': form}) 
+
+
+def loginMessage(request):
+    return render(request, 'wine/loginmessage.html')
+
+
+def logoutMessage(request):
+    return render(request, 'wine/logoutmessage.html')
